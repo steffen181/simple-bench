@@ -1,0 +1,22 @@
+name: offline-tests
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install '.[dev]'
+      - run: pytest -q
+      - run: python -m build
+      - run: python -m pip install --force-reinstall dist/*.whl
+      - name: Installed wheel smoke outside checkout
+        run: |
+          cd "$RUNNER_TEMP"
+          tracking-bench demo --out wheel-demo
+          tracking-bench verify wheel-demo/run

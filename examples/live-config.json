@@ -1,0 +1,17 @@
+{
+  "mode": "live",
+  "models": [
+    {
+      "id": "REPLACE_WITH_CATALOG_MODEL_ID",
+      "parameters": {
+        "temperature": 0
+      },
+      "price_policy": "text-v2"
+    }
+  ],
+  "max_tokens": [
+    64
+  ],
+  "budget_ledger": "runs/shared-budget.json",
+  "total_budget_usd": "5.00"
+}

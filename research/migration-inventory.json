@@ -1,0 +1,140 @@
+[
+  {
+    "source": "scripts/audit_bbh_likelihood.py",
+    "source_sha256": "1b3870d9a4312f83dc1853a26564d27b4c9e21ce5c52d784358279c9d05aa771",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/compare_bbh_token_protocols.py",
+    "source_sha256": "03de30114d9c1057c1ad74b4a962ff2eca99564276564b8e93b45fb1b4fe5afb",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/complete_bbh_likelihood.py",
+    "source_sha256": "9005085e225e9febf4f58a29206b1cf03227f2570a8a1cf23225c4d783bb3165",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/continue_openrouter_campaign.py",
+    "source_sha256": "444ece8465d13eb51e3d9841126fa9a6207e881f25c086a9f1dd7bc3ea577999",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/evaluate_bbh_mc.py",
+    "source_sha256": "707a69849a5890c4b8ecbfa9d15bdd404060988b3388f5d6ad1d61083c190d2b",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "native task YAML and full-continuation requests; external compatible inference backend"
+  },
+  {
+    "source": "scripts/execute_bbh_fresh.py",
+    "source_sha256": "18e3e3bb3c0f677253a33df4c4cef9cd41fa6e015bceda3b40507c801d57bc86",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/execute_bbh_likelihood_confirmation.py",
+    "source_sha256": "2fe118e0cb3fc0051688bd857d7f8b6c1bbfc0eb0c79221fb428d3840f91c39a",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/prepare_bbh_mc.py",
+    "source_sha256": "67e667ca08d8a5c553405f3979da0f5d39e276f04626ae0ee1bd2e13ff4b8a3b",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "fetch-bbh/export-bbh; tracking_bench.reference"
+  },
+  {
+    "source": "scripts/report_bbh_campaign.py",
+    "source_sha256": "15a27b6bb0b5face404bebb659aac02c22b06cd819028a005ca64c9b0df91a27",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/report_bbh_compact.py",
+    "source_sha256": "b73ea1c5cc195ef7665125caa6e8e9e4f493d324093e925b94cfd224c08d0a1c",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/report_bbh_fresh.py",
+    "source_sha256": "8a3d3b7f72efb3210e658b691af33bb76746deff5538ae33b090e701e56c57d0",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/report_bbh_likelihood_confirmation.py",
+    "source_sha256": "1c2fdf65bbce911a7811d56e08414b6a5deaf070ecbf4190f9e0a778cac35779",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/report_bbh_protocol_pilot.py",
+    "source_sha256": "ea433132d957e033cc355aa20d23c534ead227356694ba04f4df5023c4bc15a2",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/report_openrouter_campaign.py",
+    "source_sha256": "e7fec26476f6bcc8d8aa819c44ba95d1f0f3088973950effeaf35ce3e78bf2ad",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/run_bbh_campaign.py",
+    "source_sha256": "a786db9e39a621d980defb68532b1c2f9dd473c1fa83178a259fc9f811bc6662",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/run_bbh_compact.py",
+    "source_sha256": "bcf148e7dee0ea90c2201c206d36fb82d2ce4f6737139a69ca97cc6affb3a10a",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/run_bbh_fresh.py",
+    "source_sha256": "311dcb22e59c555911cddc271dfc510ab94e1a87e51815fc36c9a94b4b322972",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/run_bbh_likelihood.py",
+    "source_sha256": "b4be957ee5056d572c9ed0c955e5db0e0145b883279fc43c61e2e11ba298defd",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "tracking_bench.bbh_likelihood API helpers; score-token; dated runner requires archive/account config"
+  },
+  {
+    "source": "scripts/run_bbh_likelihood_confirmation.py",
+    "source_sha256": "5ceec8b37978de8fd25bad9c35eca4f449ae4815f5044e4199384d53e1816090",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/run_bbh_protocol_pilot.py",
+    "source_sha256": "623b8422efa15a2c940787568db458f158b8256f24bcbc4db1cc36516e411271",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/run_openrouter_campaign.py",
+    "source_sha256": "db24211d77b48a3663af93a0692834ce23338c5d4f01d22953af5ed56e819269",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "Portable prepare/run/verify/report plus retained research helper modules; historical experiment recipe requires its original archive."
+  },
+  {
+    "source": "scripts/verify_bbh_harness.py",
+    "source_sha256": "37c14bee306bcaf77fe4e79706041819fa48832dd25b51ee94ecc9632167c421",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "archival pinned-harness validation recipe; not a portable public command"
+  },
+  {
+    "source": "scripts/verify_bbh_mc.py",
+    "source_sha256": "9819cb95339b9e247848ea89ddf9177360f5dfb46b89e3fa0d89dec6fdf60e57",
+    "disposition": "not copied: dated orchestration / archive or account dependencies",
+    "replacement": "tracking_bench.reference.verify_bundle/native_tasks; score-native"
+  }
+]

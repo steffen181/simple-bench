@@ -1,0 +1,191 @@
+[
+  {
+    "source": "src/layercast_lab/benchmark/__init__.py",
+    "source_sha256": "8bbbedc3144c8c4c19a373125c277a7482bfd26fb8e4820dcbf56b62dafbf66b",
+    "target": "src/tracking_bench/__init__.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "8bbbedc3144c8c4c19a373125c277a7482bfd26fb8e4820dcbf56b62dafbf66b"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/bbh.py",
+    "source_sha256": "03bec4d665e60636d9320fcbb87144d964312fbb1321d8edaf41568faeb9850f",
+    "target": "src/tracking_bench/bbh.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "03bec4d665e60636d9320fcbb87144d964312fbb1321d8edaf41568faeb9850f"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/bbh_compact.py",
+    "source_sha256": "e6ca8ecb064cace6ac3cef8f79116d6ee55c83dc07f00bc26e97bd9ab998e7c5",
+    "target": "src/tracking_bench/bbh_compact.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "e6ca8ecb064cace6ac3cef8f79116d6ee55c83dc07f00bc26e97bd9ab998e7c5"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/bbh_fresh.py",
+    "source_sha256": "a0748bde43a6991292f712aadcf30234451211884419cb0c8eca5f921434848d",
+    "target": "src/tracking_bench/bbh_fresh.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "a0748bde43a6991292f712aadcf30234451211884419cb0c8eca5f921434848d"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/bbh_likelihood.py",
+    "source_sha256": "73864a1ee1abb85fdda2ee8a15ea8344c2baf5f80aa64225261bf7986fa47666",
+    "target": "src/tracking_bench/bbh_likelihood.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "73864a1ee1abb85fdda2ee8a15ea8344c2baf5f80aa64225261bf7986fa47666"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/bbh_likelihood_confirmation.py",
+    "source_sha256": "545c622af2e131a516fa94f43882851fb3a93c228de5e6b306e7bbd05ee20aa9",
+    "target": "src/tracking_bench/bbh_likelihood_confirmation.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "545c622af2e131a516fa94f43882851fb3a93c228de5e6b306e7bbd05ee20aa9"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/bbh_mc.py",
+    "source_sha256": "b237fd56c92832f3197eb7942f3729ed2cd02abf244afb551866d6a19585cbc7",
+    "target": "src/tracking_bench/bbh_mc.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "b237fd56c92832f3197eb7942f3729ed2cd02abf244afb551866d6a19585cbc7"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/bbh_protocol_pilot.py",
+    "source_sha256": "1ceee0881d00ee5ac368addcadd6b42256862302ff063f6607601d8d592cbd9e",
+    "target": "src/tracking_bench/bbh_protocol_pilot.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "1ceee0881d00ee5ac368addcadd6b42256862302ff063f6607601d8d592cbd9e"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/budget.py",
+    "source_sha256": "cfcb7b6f9a2efa732b75a13998eefe70463944ef3ae6b10a99b2ad5619eca7b1",
+    "target": "src/tracking_bench/budget.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "cfcb7b6f9a2efa732b75a13998eefe70463944ef3ae6b10a99b2ad5619eca7b1"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/campaign.py",
+    "source_sha256": "70590cfc3333ee8dc702994c72239a2346d17c5ba9aef1a2b4e4ea26bb234733",
+    "target": "src/tracking_bench/campaign.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "70590cfc3333ee8dc702994c72239a2346d17c5ba9aef1a2b4e4ea26bb234733"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/common.py",
+    "source_sha256": "dc7fdd4e892cad013971fa675b3840d278b2921e2469632c4f28a119c1a34572",
+    "target": "src/tracking_bench/common.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "dc7fdd4e892cad013971fa675b3840d278b2921e2469632c4f28a119c1a34572"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/confirmation.py",
+    "source_sha256": "65afaeb30cdf8d6d965718e87da3aa6303496a577a3bfa0bf37253fb3f444cb8",
+    "target": "src/tracking_bench/confirmation.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "65afaeb30cdf8d6d965718e87da3aa6303496a577a3bfa0bf37253fb3f444cb8"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/corpus.py",
+    "source_sha256": "48e3d1a5700968e753d766be43cf114ab5a184e17480453caef195386de7a185",
+    "target": "src/tracking_bench/corpus.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "48e3d1a5700968e753d766be43cf114ab5a184e17480453caef195386de7a185"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/dense.py",
+    "source_sha256": "b43626b7fdd3e597f004a9359aca406a8bfe044fe01691eeba90fe1b03ecbf28",
+    "target": "src/tracking_bench/dense.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "b43626b7fdd3e597f004a9359aca406a8bfe044fe01691eeba90fe1b03ecbf28"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/history.py",
+    "source_sha256": "3f645f98a653ef59aad986825763e370cf74b59be7d4acca76c2541fcba0840e",
+    "target": "src/tracking_bench/history.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "3f645f98a653ef59aad986825763e370cf74b59be7d4acca76c2541fcba0840e"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/openrouter.py",
+    "source_sha256": "2b376769d066a32e5d1154e4fa5275dd59cf10e30e38e0fd6f28d5170ee80acf",
+    "target": "src/tracking_bench/openrouter.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "2b376769d066a32e5d1154e4fa5275dd59cf10e30e38e0fd6f28d5170ee80acf"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/publication.py",
+    "source_sha256": "e4741f4418055528ac321fa0b82c16e1beb6327bbdd4b06e0b20aee043240524",
+    "target": "src/tracking_bench/publication.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "e4741f4418055528ac321fa0b82c16e1beb6327bbdd4b06e0b20aee043240524"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/report.py",
+    "source_sha256": "b3a6ea35ac4bcd71818899e0e3f3e4cc7d91c0611c8f4529881fee184be0871e",
+    "target": "src/tracking_bench/report.py",
+    "changes": "Namespace strings; preserve entities in grouped reports and entities/relevant_updates in option-order contrasts.",
+    "target_sha256": "0d50085ab5eba12dd4d8a6ce32f279b636e5b3d3d0cbf6a1158a3e5ecec1f8b1"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/run.py",
+    "source_sha256": "d15e06e91006dbaf07fd300dcad2b72192d08c3e53ea6c24b545a41490ae5be0",
+    "target": "src/tracking_bench/run.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "d15e06e91006dbaf07fd300dcad2b72192d08c3e53ea6c24b545a41490ae5be0"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/scoring.py",
+    "source_sha256": "7d491b5101efc498e0e72a10fd887c0116720076160f9e00b654b83d36512333",
+    "target": "src/tracking_bench/scoring.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "7d491b5101efc498e0e72a10fd887c0116720076160f9e00b654b83d36512333"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/series.py",
+    "source_sha256": "2f591799849e0c11de02cc70d821ce3bcecf2393545ad34b35d02c443428519f",
+    "target": "src/tracking_bench/series.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "2f591799849e0c11de02cc70d821ce3bcecf2393545ad34b35d02c443428519f"
+  },
+  {
+    "source": "src/layercast_lab/benchmark/structure.py",
+    "source_sha256": "446c484338ce4be1512977c5068ef6ac93994dc64440938961015e545820a2e2",
+    "target": "src/tracking_bench/structure.py",
+    "changes": "Namespace strings only",
+    "target_sha256": "446c484338ce4be1512977c5068ef6ac93994dc64440938961015e545820a2e2"
+  },
+  {
+    "source": "tests/test_benchmark_structure.py",
+    "source_sha256": "3181fc6aa13bceb30f85e14845bbe667e565e167393ff0901915ba4adc2fc9f5",
+    "target": "tests/test_benchmark_structure.py",
+    "changes": "Namespace; omit two archive-specific tests where present, recorded in migration docs",
+    "target_sha256": "7e3ea47d9250c27af98eeef85923a9e3045887d3e74e4248e88a5f4e761d005f"
+  },
+  {
+    "source": "tests/test_benchmark_dense.py",
+    "source_sha256": "e82d857668480d5417ec0083fe2f22e34143ea65a7b7b92d9aa028018e037e09",
+    "target": "tests/test_benchmark_dense.py",
+    "changes": "Namespace; omit two archive-specific tests where present, recorded in migration docs",
+    "target_sha256": "d7091c4d5d562e71b5cbbb59a1802df7354c4c17144376ea886fee19ca525363"
+  },
+  {
+    "source": "tests/test_benchmark_transport.py",
+    "source_sha256": "3c817b8954ad48b3f097527509a68934ff2bc8807bcf5ea3c0ae99d6c91b8577",
+    "target": "tests/test_benchmark_transport.py",
+    "changes": "Namespace; omit two archive-specific tests where present, recorded in migration docs",
+    "target_sha256": "79ab6aa5232a4daa5061bfcca14b7b1f271d18626e57bcbfb3490a324bd25c58"
+  },
+  {
+    "source": "tests/test_bbh_likelihood.py",
+    "source_sha256": "c7a4adfc05811ad4e467c24ba9299b7e289a6c6c34a30be49c65bbb9823165dd",
+    "target": "tests/test_bbh_likelihood.py",
+    "changes": "Namespace; omit two archive-specific tests where present, recorded in migration docs",
+    "target_sha256": "685571f9b186cfd88865959c6ed3e7c8e805f6d67d8a8debae0f14c6b049d418"
+  },
+  {
+    "source": "tests/test_bbh_likelihood_confirmation.py",
+    "source_sha256": "941ff9af4f2595fc9d26fb7de3ed88a655fadfc7a8e9d467bd2e950fd30c2575",
+    "target": "tests/test_bbh_likelihood_confirmation.py",
+    "changes": "Namespace; omit two archive-specific tests where present, recorded in migration docs",
+    "target_sha256": "54c7581a5f0da82a936ccf9fa7ea078e293ae8b8a3777ed2bcc33a6956220413"
+  }
+]

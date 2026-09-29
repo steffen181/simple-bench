@@ -1,0 +1,61 @@
+{
+  "status": "historical_context_not_new_package_inference",
+  "source": "verification/bbh_likelihood_confirmation_20260929/campaign/confirmation/REPORT.md",
+  "source_sha256": "6de967b23bdd5302dcb43d7a7f2403f5fa4838274c2446af5098cc94e539e3f5",
+  "protocol": "native_raw_3shot_full_continuation_choice_character_normalization",
+  "precision": "NF4 double quantization; BF16 compute",
+  "reference": [
+    {
+      "model": "phi4mini",
+      "n": 3,
+      "correct": 79,
+      "total": 250
+    },
+    {
+      "model": "phi4mini",
+      "n": 5,
+      "correct": 42,
+      "total": 250
+    },
+    {
+      "model": "phi4mini",
+      "n": 7,
+      "correct": 47,
+      "total": 250
+    },
+    {
+      "model": "qwen25_7b",
+      "n": 3,
+      "correct": 66,
+      "total": 250
+    },
+    {
+      "model": "qwen25_7b",
+      "n": 5,
+      "correct": 52,
+      "total": 250
+    },
+    {
+      "model": "qwen25_7b",
+      "n": 7,
+      "correct": 42,
+      "total": 250
+    }
+  ],
+  "fresh": [
+    {
+      "model": "phi4mini",
+      "groups": 48,
+      "total_rotations": 96,
+      "correct": 22,
+      "anchor_correct": 16
+    },
+    {
+      "model": "qwen25_7b",
+      "groups": 48,
+      "total_rotations": 96,
+      "correct": 18,
+      "anchor_correct": 22
+    }
+  ]
+}

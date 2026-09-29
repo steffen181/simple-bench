@@ -1,0 +1,74 @@
+{
+  "bbh_commit": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+  "harness_commit": "c339225c8ec169296f45f5326a7c0f8e3baa6005",
+  "files": {
+    "tracking_shuffled_objects_three_objects.json": {
+      "url": "https://raw.githubusercontent.com/suzgunmirac/BIG-Bench-Hard/9ee07bd481feebf959a6b59d61ea57bdcf30964d/bbh/tracking_shuffled_objects_three_objects.json",
+      "sha256": "546cc7bf10c6a01a6a4c17ae28a4966485f21f29fd5d111f37858ec78e354f6b"
+    },
+    "tracking_shuffled_objects_three_objects.txt": {
+      "url": "https://raw.githubusercontent.com/suzgunmirac/BIG-Bench-Hard/9ee07bd481feebf959a6b59d61ea57bdcf30964d/cot-prompts/tracking_shuffled_objects_three_objects.txt",
+      "sha256": "2ef54cb2a72052adc3484a76209cb6a6535f194d677e79bcec2e2e71cf3768af"
+    },
+    "fewshot_tracking_shuffled_objects_three_objects.yaml": {
+      "url": "https://raw.githubusercontent.com/huggingface/lm-evaluation-harness/c339225c8ec169296f45f5326a7c0f8e3baa6005/lm_eval/tasks/bbh/fewshot/tracking_shuffled_objects_three_objects.yaml",
+      "sha256": "1001e63b925b43c01736b1fb42b17ba703b860ca26cc52fc5f9dd957885c8899"
+    },
+    "cot_fewshot_tracking_shuffled_objects_three_objects.yaml": {
+      "url": "https://raw.githubusercontent.com/huggingface/lm-evaluation-harness/c339225c8ec169296f45f5326a7c0f8e3baa6005/lm_eval/tasks/bbh/cot_fewshot/tracking_shuffled_objects_three_objects.yaml",
+      "sha256": "2b20f6f088956c4fcde66662cc60be5c6ea32c9bc30555104ae47fdfb60352bc"
+    },
+    "tracking_shuffled_objects_five_objects.json": {
+      "url": "https://raw.githubusercontent.com/suzgunmirac/BIG-Bench-Hard/9ee07bd481feebf959a6b59d61ea57bdcf30964d/bbh/tracking_shuffled_objects_five_objects.json",
+      "sha256": "2063a46a4fb484236ed4310523606543a3e1dd4a4dc34eda65d407910ece25a5"
+    },
+    "tracking_shuffled_objects_five_objects.txt": {
+      "url": "https://raw.githubusercontent.com/suzgunmirac/BIG-Bench-Hard/9ee07bd481feebf959a6b59d61ea57bdcf30964d/cot-prompts/tracking_shuffled_objects_five_objects.txt",
+      "sha256": "2ef54cb2a72052adc3484a76209cb6a6535f194d677e79bcec2e2e71cf3768af"
+    },
+    "fewshot_tracking_shuffled_objects_five_objects.yaml": {
+      "url": "https://raw.githubusercontent.com/huggingface/lm-evaluation-harness/c339225c8ec169296f45f5326a7c0f8e3baa6005/lm_eval/tasks/bbh/fewshot/tracking_shuffled_objects_five_objects.yaml",
+      "sha256": "9d8e4a12888e5f8ec576c9d529a8784ddb2a9aff0f3a16fa424ea0be39550276"
+    },
+    "cot_fewshot_tracking_shuffled_objects_five_objects.yaml": {
+      "url": "https://raw.githubusercontent.com/huggingface/lm-evaluation-harness/c339225c8ec169296f45f5326a7c0f8e3baa6005/lm_eval/tasks/bbh/cot_fewshot/tracking_shuffled_objects_five_objects.yaml",
+      "sha256": "82eeedd04ffb2bacd0e765b2c04602c25eafe0f10c328b6816b716c8a0ce5f86"
+    },
+    "tracking_shuffled_objects_seven_objects.json": {
+      "url": "https://raw.githubusercontent.com/suzgunmirac/BIG-Bench-Hard/9ee07bd481feebf959a6b59d61ea57bdcf30964d/bbh/tracking_shuffled_objects_seven_objects.json",
+      "sha256": "b59fd05b850c37cf57cb514ae1e6975c00b1638ade2291722056b2af3c54084d"
+    },
+    "tracking_shuffled_objects_seven_objects.txt": {
+      "url": "https://raw.githubusercontent.com/suzgunmirac/BIG-Bench-Hard/9ee07bd481feebf959a6b59d61ea57bdcf30964d/cot-prompts/tracking_shuffled_objects_seven_objects.txt",
+      "sha256": "2ef54cb2a72052adc3484a76209cb6a6535f194d677e79bcec2e2e71cf3768af"
+    },
+    "fewshot_tracking_shuffled_objects_seven_objects.yaml": {
+      "url": "https://raw.githubusercontent.com/huggingface/lm-evaluation-harness/c339225c8ec169296f45f5326a7c0f8e3baa6005/lm_eval/tasks/bbh/fewshot/tracking_shuffled_objects_seven_objects.yaml",
+      "sha256": "fac9fc92208cd7ec3343fcfc6e43c6dd4859c8bec32ce66ec915c45e273d3cd0"
+    },
+    "cot_fewshot_tracking_shuffled_objects_seven_objects.yaml": {
+      "url": "https://raw.githubusercontent.com/huggingface/lm-evaluation-harness/c339225c8ec169296f45f5326a7c0f8e3baa6005/lm_eval/tasks/bbh/cot_fewshot/tracking_shuffled_objects_seven_objects.yaml",
+      "sha256": "51f8548fdb73e03675397ab1f7af944e0de77e54d009e5e91f23f493733d2017"
+    },
+    "fewshot_template.yaml": {
+      "url": "https://raw.githubusercontent.com/huggingface/lm-evaluation-harness/c339225c8ec169296f45f5326a7c0f8e3baa6005/lm_eval/tasks/bbh/fewshot/_fewshot_template_yaml",
+      "sha256": "128388c1e26c45a3f3cf4f37baf908a7ef4409566d0bfc64f504971012cd4cba"
+    },
+    "cot_fewshot_template.yaml": {
+      "url": "https://raw.githubusercontent.com/huggingface/lm-evaluation-harness/c339225c8ec169296f45f5326a7c0f8e3baa6005/lm_eval/tasks/bbh/cot_fewshot/_cot_fewshot_template_yaml",
+      "sha256": "d8bee95892dd182e5bcae5fe520c43b17ca194ca8ec21365aa9170d43e946b3f"
+    },
+    "harness_LICENSE.md": {
+      "url": "https://raw.githubusercontent.com/huggingface/lm-evaluation-harness/c339225c8ec169296f45f5326a7c0f8e3baa6005/LICENSE.md",
+      "sha256": "a806e42547620dffbc2ec0333322c8b3523b4af11e059be14ef81aa5b1ae021f"
+    },
+    "harness_pyproject.toml": {
+      "url": "https://raw.githubusercontent.com/huggingface/lm-evaluation-harness/c339225c8ec169296f45f5326a7c0f8e3baa6005/pyproject.toml",
+      "sha256": "44d54a7d3efa0a8a626cdb37ef5a8265f5c584ac7365ff5ae3e91d04369094b1"
+    }
+  },
+  "harness_archive": {
+    "url": "https://codeload.github.com/huggingface/lm-evaluation-harness/tar.gz/c339225c8ec169296f45f5326a7c0f8e3baa6005",
+    "sha256": "127f7dd75f9dff818d3e7fc85d708584d866cb4350878642385b8baddc5d2a99"
+  }
+}

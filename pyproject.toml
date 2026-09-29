@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tracking-bench"
+version = "0.1.0"
+description = "Reproducible state-tracking benchmarks and BBH comparison for closed-model APIs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["PyYAML>=6,<7", "Jinja2>=3,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "build>=1,<2"]
+analysis = ["numpy>=1.24,<3"]
+
+[project.scripts]
+tracking-bench = "tracking_bench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+tracking_bench = ["data/*.json", "data/*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "--strict-markers"
+
+[tool.setuptools]
+license-files = ["licenses/*.txt", "LICENSE_STATUS.md"]

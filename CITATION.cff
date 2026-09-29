@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Cite the released version and archive identifier when available; also cite BIG-Bench Hard and BIG-bench as described in THIRD_PARTY_NOTICES.md."
+title: "Tracking Bench"
+authors:
+  - name: "Tracking Bench contributors"
+type: software
+version: 0.1.0
+date-released: 2026-09-29
+abstract: "Reproducible generated state-tracking tasks and explicit BBH comparison contracts for model evaluation. Licensing-pending release candidate."
