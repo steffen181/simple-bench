@@ -1,5 +1,8 @@
-# First-party license decision pending
+# License
 
-The repository owner has not yet selected a license for the first-party benchmark code. This release candidate does not grant new redistribution or sublicensing rights to that code. Select and add the owner's authorized LICENSE before publishing the candidate as an open-source repository.
+The first-party benchmark code is licensed under the [MIT License](LICENSE).
+Copyright (c) 2026 Steffen Dannhauer.
 
-Upstream-derived BBH templates/demonstrations/task configuration and harness material retain their MIT notices in `licenses/`. Those notices do not license unrelated first-party code. Protected Stage1/legacy sources and model weights are excluded.
+The license follows the standard [OSI MIT license text](https://opensource.org/license/mit), SPDX identifier `MIT`. MIT does not have numbered versions.
+
+Upstream-derived BBH templates, demonstrations, task configuration and harness material retain their original MIT copyright and license notices in `licenses/`. See [third-party notices](THIRD_PARTY_NOTICES.md). Model weights and protected Stage1/legacy sources are not included.

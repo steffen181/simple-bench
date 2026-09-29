@@ -4,6 +4,7 @@ title: "Tracking Bench"
 authors:
   - name: "Tracking Bench contributors"
 type: software
+license: MIT
 version: 0.1.0
 date-released: 2026-09-29
-abstract: "Reproducible generated state-tracking tasks and explicit BBH comparison contracts for model evaluation. Licensing-pending release candidate."
+abstract: "Reproducible generated state-tracking tasks and explicit BBH comparison contracts for model evaluation. MIT-licensed release candidate."

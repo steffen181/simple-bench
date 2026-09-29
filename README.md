@@ -2,7 +2,7 @@
 
 Generate reproducible object-tracking benchmarks for closed-model APIs, with a separate, pinned BIG-Bench Hard (BBH) comparison track.
 
-**Release candidate 0.1.0 — first-party licensing decision pending.** This directory is a standalone repository candidate. See [license status](LICENSE_STATUS.md). No model weights or credentials are included.
+**Release candidate 0.1.0 — MIT licensed.** See [LICENSE](LICENSE) and [third-party notices](THIRD_PARTY_NOTICES.md). No model weights or credentials are included.
 
 The benchmark varies the number of people/objects, event count, relevant state updates and answer order. It generates swaps and directed handoffs, solves every case independently and checks the rendered text. Increasing these parameters increases task complexity; whether model accuracy declines is an empirical result.
 

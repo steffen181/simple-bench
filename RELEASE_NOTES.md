@@ -1,6 +1,6 @@
 # 0.1.0 release candidate — 2026-09-29
 
-Standalone extraction for state-tracking evaluation with a designed complexity ladder and a separate pinned BBH comparison contract. First-party licensing remains pending; this candidate has not been published to a hosted repository or package registry.
+Standalone extraction for state-tracking evaluation with a designed complexity ladder and a separate pinned BBH comparison contract. First-party code is licensed under the MIT License; upstream MIT notices are retained. This candidate has not been published to a hosted repository or package registry.
 
 Validation during extraction: 61 offline tests passed; the wheel installed into a separate Python 3.10 environment; the documented development/confirmation generator created 384 cases and 192 groups per split with no structural overlap. The native export/import smoke covered 758 cases and seven movable task configurations. Missing/duplicate replies, mismatched request hashes and redefined prompts were rejected.
 
