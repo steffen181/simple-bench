@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Simple Bench · Wer behält den Überblick?</title>
+<style>
+:root{font:16px/1.55 system-ui,sans-serif;color:#183132;background:#f5f5ef;--luna:#087f83;--sonnet:#8054a2;--line:#dce3db}*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0}main{max-width:1180px;margin:auto;padding:36px 24px}h1{font-size:clamp(30px,5vw,48px);line-height:1.15;letter-spacing:-1.6px;margin:12px 0 18px}h2{font-size:23px;line-height:1.3;margin-top:0}h3{font-size:17px;margin:0 0 10px}p{max-width:900px}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#58716a}.lead{font-size:18px;color:#45615a}.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;margin:22px 0}.muted,small{font-size:13px;color:#58706a}.legend{display:flex;flex-wrap:wrap;gap:18px}.luna{color:var(--luna)}.sonnet{color:var(--sonnet)}.legend b::before{content:'';display:inline-block;width:10px;height:10px;background:currentColor;border-radius:50%;margin-right:7px}.filters{display:flex;flex-wrap:wrap;gap:14px;margin:22px 0}label{display:grid;gap:6px;font-size:13px;font-weight:600}select{font:inherit;color:inherit;padding:10px 12px;border:1px solid #bccdc4;border-radius:8px;background:white;max-width:100%}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:13px}td,th{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-weight:600;white-space:nowrap}.heat td{padding:6px;min-width:152px;border:0}.heat th{border:0}.cell{width:100%;padding:13px 12px;background:#f8faf6;border:1px solid var(--line);border-radius:10px;color:inherit;cursor:pointer;text-align:left;font:inherit}.cell[aria-pressed=true]{outline:2px solid #285e53;outline-offset:1px;background:#eff7f0}.cell:hover:not(:disabled){background:#edf4ec}.cell:disabled{cursor:default;color:#819187;background:#f4f4ef}.cell:focus-visible,summary:focus-visible,select:focus-visible{outline:3px solid #d4862b;outline-offset:3px}.scoreline{display:flex;justify-content:space-between;gap:8px;font-size:12px}.scoreline strong{font-size:16px}.track{height:5px;background:#e6ebe5;border-radius:4px;overflow:hidden;margin:4px 0 10px}.track span{display:block;height:100%;background:currentColor}.cell small{display:block;font-size:11px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}.card{background:#f7f9f5;border:1px solid var(--line);padding:18px;border-radius:12px}.big{font-size:29px;display:block;line-height:1.25;margin:8px 0}.dots{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0}.dot{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;font-size:12px;font-weight:700;border:1px solid #bfcbc4;color:#5c6f66;background:#f5f5ee}.dot.half{background:#c8dcd1;color:#234d3e}.dot.full{background:#225f4d;color:white;border-color:#225f4d}.dot.unknown{border-style:dashed}.note{border-left:3px solid #d3a85f;padding-left:13px}.badge{display:inline-block;padding:4px 10px;border-radius:6px;background:#edf2e9;font-size:12px}details{margin:20px 0}summary{cursor:pointer;font-weight:600;padding:8px 0}a{color:#176e65}footer{font-size:13px;color:#58706a;padding:8px 0 24px}.paired{font-size:15px}#group-detail{scroll-margin-top:20px}.axis-explain{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.axis-explain p{margin:0}.empty{padding:18px;color:#58706a;background:#f4f5ef;border-radius:10px}@media(max-width:650px){main{padding:24px 14px}.panel{padding:18px 14px}.cards,.axis-explain{grid-template-columns:1fr}.filters label{width:100%}h1{letter-spacing:-1px}.heat td{min-width:140px}}
+</style></head>
+<body><main>
+<div class="eyebrow">Simple Bench · Nachvollziehbare Modellvergleiche</div>
+<p id="fixture-notice" class="note" hidden></p>
+<h1>Wer behält den Überblick?</h1>
+<p class="lead">Menschen geben Gegenstände weiter oder tauschen sie. Das Modell soll sagen, wer am Ende einen bestimmten Gegenstand hat. Wir verändern die Aufgabe und zeigen, wie oft die Antwort stimmt.</p>
+<div class="legend"><b class="luna">GPT-6 Luna</b><b class="sonnet">Claude Sonnet 5</b></div>
+<section class="panel"><h2>Drei Stellschrauben</h2><div class="axis-explain">
+<p><b>N · Personen</b><br><small>Wie viele Personen, Gegenstände und Antwortoptionen gibt es?</small></p>
+<p><b>R · Relevante Wechsel</b><br><small>Wie oft wechselt der gesuchte Gegenstand den Besitzer?</small></p>
+<p><b>D · Andere Ereignisse</b><br><small>Wie viele weitere Ereignisse kommen hinzu, ohne dessen Besitzer zu ändern?</small></p>
+</div><p class="muted"><b>K = R + D</b> zählt alle Ereignisse. Beispiel: N=7, R=8, D=16 bedeutet sieben Personen und 24 Ereignisse, davon acht für den gesuchten Gegenstand. R bezeichnet keine internen Reasoning-Schritte.</p></section>
+<section class="panel"><h2>1. Bedingungen wählen, Ergebnisse vergleichen</h2>
+<p class="muted">Jede Kachel zeigt dieselben Fälle für beide Modelle. Höher bedeutet mehr richtige Antworten. Eine Kachel auswählen, um darunter alle Fallgruppen zu sehen.</p>
+<div class="filters">
+<label>Messreihe<select id="phase"><option value="develop">Breites Raster (Pilot)</option><option value="confirm">Zusätzliche frische Fälle</option></select></label>
+<label>Aufgabe<select id="task"><option value="swap">Tauschen (Swap)</option><option value="handoff">Weitergeben (Handoff)</option></select></label>
+<label>Andere Ereignisse (D)<select id="d"></select></label>
+</div><p id="series-note" class="note muted"></p><p id="task-note" class="muted"></p>
+<div class="cards" id="overview"></div>
+<div id="curves" hidden style="margin-top:24px"><h3>Leistungskurven</h3><div class="filters"><label>Achse der Kurve<select id="curve-axis"><option value="n">Personen (N)</option><option value="r">Relevante Wechsel (R)</option><option value="d">Andere Ereignisse (D)</option></select></label><label id="fixed-one-label">Fester Wert<select id="fixed-one"></select></label><label id="fixed-two-label">Fester Wert<select id="fixed-two"></select></label></div><div id="curve-chart" class="scroll"></div><p class="muted">Große Punkte: Anteil richtiger Antworten. Kleine Punkte: einzelne Strukturgruppen (0, 1 oder 2 von 2 richtig). Linien verbinden Messpunkte; sie sind keine zusätzliche Messung. Beide anderen Achsen bleiben fest. Ein großer Punkt wählt die zugehörigen Fälle unten aus.</p></div>
+<h3 style="margin-top:24px">N × R bei festem D</h3><div id="heat" class="scroll heat"></div>
+<p class="muted">Spalten: Personen (N). Zeilen: relevante Wechsel (R). „Nicht gemessen“ bedeutet keine Daten. Unvollständige Messungen erhalten keinen Prozentwert.</p>
+</section>
+<section class="panel" id="group-detail" aria-live="polite"><h2>2. Einzelne Fälle und ihre Streuung ansehen</h2><div id="detail"></div></section>
+<section class="panel"><h2>Was zeigen die zusätzlichen Fälle?</h2><p class="muted">Nach dem Pilot wurden auffällige Unterschiede nach einer festgelegten Regel ausgewählt. Nur die ausgewählten Bedingungen wurden mit frischen Fällen erneut gemessen. Die folgenden Werte beschreiben diese Messungen.</p><div id="observations"></div></section>
+<section class="panel"><h2>BBH zum Vergleich</h2><p class="muted">Separat gemessen: dieselben 45 ursprünglichen BBH-Fragen. Drei Beispiele im Prompt, JSON-Antworten. Das Raster oben verwendet keine Beispiele. Diese Werte sind weder native <code>acc_norm</code> noch ein BBH-Gesamtscore.</p><div id="bbh" class="scroll"></div></section>
+<details id="methods" class="panel"><summary>Methoden, ursprüngliche Statistik und Prüfbelege</summary>
+<p id="execution" class="muted"></p><div id="conditions"></div>
+<h3>Warum die Messreihen getrennt bleiben</h3><p class="muted">Der Pilot umfasst drei Strukturgruppen je Zelle, die zusätzliche Reihe 24 pro ausgewählter Zelle. Zwei Antwortanordnungen gehören jeweils zu derselben Gruppe. Die Verteilung zeigt Unterschiede zwischen Fällen und Anordnungen. Wiederholte identische API-Anfragen wurden nicht separat gemessen.</p>
+<h3>Ursprüngliche formale Prüfung</h3><p class="muted">Das frühere Protokoll verlangte eine statistische Absicherung über 15 Prozentpunkten. Sein konservatives Urteil bleibt hier erhalten. „Unklar“ bedeutet, dass dieses Absicherungskriterium nicht erreicht wurde; die beobachteten Werte werden oben beschreibend gezeigt.</p><div id="inference"></div>
+<ul id="limits"></ul><p id="support" class="muted"></p>
+</details>
+<footer><p id="cost"></p><a href="REPORT.md">Bericht</a> · <a href="results.json">Alle Daten (JSON)</a> · <a href="results.csv">Zellen (CSV)</a> · <a href="groups.csv">Fallgruppen (CSV)</a> · <a href="SHA256SUMS">Prüfsummen</a><p>Offline nutzbar. Keine neuen Modellaufrufe beim Öffnen dieser Seite.</p></footer>
+<script type="application/json" id="data">__RESULTS_JSON__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('data').textContent),$=id=>document.getElementById(id);
+const esc=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pct=x=>x==null?'—':(100*x).toLocaleString('de-DE',{minimumFractionDigits:1,maximumFractionDigits:1})+' %';
+const pp=x=>x==null?'—':(100*x).toLocaleString('de-DE',{minimumFractionDigits:1,maximumFractionDigits:1})+' Prozentpunkte';
+const models=['openai/gpt-6-luna','anthropic/claude-sonnet-5'];
+const short=m=>m.startsWith('openai/')?'Luna':'Sonnet',cls=m=>m.startsWith('openai/')?'luna':'sonnet';
+const desc=data.descriptive||{groups:[],cells:[],pairs:[]};let focus=null;
+const isGrid=data.presentation?.kind==='swap-curves';
+const cellMatch=(c,n,r,d,phase,task)=>c.n===n&&(c.r??c.relevant_updates)===r&&c.d===d&&c.phase===phase&&c.task===task;
+const scores=(phase,task,d)=>data.cells.filter(c=>c.phase===phase&&c.task===task&&c.seed==='all'&&c.d===d);
+const pctCount=c=>c?`${c.correct}/${c.planned} richtig · ${pct(c.display_accuracy)}`:'Nicht gemessen';
+if(data.execution_kind!=='live'){$('fixture-notice').hidden=false;$('fixture-notice').textContent=data.execution_kind==='offline_fixture'?'OFFLINE-TESTDATEN · Simulierte Antworten zur Softwareprüfung, keine Modellmessungen.':'Messherkunft nicht ausgewiesen · Diese Darstellung ist kein Beleg für Live-Modellmessungen.';}
+$('d').innerHTML=data.axes.d.map(d=>`<option value="${d}">${d}</option>`).join('');
+$('execution').textContent=Object.entries(data.audits).map(([stage,a])=>`${stage}: ${a.summary.status} · ${a.summary.observed}/${a.summary.planned}`).join(' | ');
+$('conditions').innerHTML=(data.execution_kind==='offline_fixture'?'<p><b>Offline-Simulation: Bedingungen und Usage sind Testwerte, keine gemessenen Anbieterangaben.</b></p>':'')+'<p class="muted">Beide Modelle: 256 Ausgabetokens, striktes JSON, explizit geprüfte null API-Reasoning-Tokens. Sampling: Anbieterdefaults; interne Präzision unbekannt. Formatfehler zählen als falsch und bleiben separat sichtbar.</p>'+data.models.map(m=>`<p class="muted">${esc(m.id)} · ${esc(m.canonical_slug)} · ${esc(m.provider)}</p>`).join('');
+$('limits').innerHTML=data.limitations.map(x=>`<li>${esc(x)}</li>`).join('');
+$('support').textContent=data.unsupported.length+' Aufgabe/Zellen hatten vorab zu wenige frische Strukturen für die zusätzliche Messreihe. Ihre Pilotwerte bleiben sichtbar.';
+$('cost').textContent=`${isGrid?'Neue Messreihe':'Kampagne'}: $${Number(data.budget.study_spent).toFixed(4)} · ${isGrid?'Verbrauch im neuen Budget':'Alle bisherigen Läufe'}: $${Number(data.budget.total_accounted).toFixed(4)} von $4 · Audit ${data.audit_status}`;
+const label=c=>`N=${c.n}, R=${c.r}, D=${c.d}`;
+function contrastName(c){return c.kind==='model_gap'?`${short(c.left)} − ${short(c.right)} bei ${label(c.cell)}`:`${short(c.model)}: Rückgang von ${label(c.easy)} auf ${label(c.hard)}`;}
+$('observations').innerHTML=data.inference.length?'<table><tr><th>Vergleich</th><th>Pilot</th><th>Frische Fälle</th></tr>'+data.inference.map(v=>`<tr><td>${esc(contrastName(v.contrast))}</td><td>${pp(v.contrast.development_effect)}</td><td>${pp(v.effect)}</td></tr>`).join('')+'</table><p class="muted">Beschreibende Unterschiede in Prozentpunkten. Die Auswahl erfolgte anhand des Pilots; zusätzliche Fälle wurden nur an diesen Stellen gemessen.</p>':'<p>Noch keine zusätzlichen Messwerte vorhanden.</p>';
+$('observations').classList.add('scroll');
+const verdict={INCONCLUSIVE:'Unklar nach dem ursprünglichen Kriterium',CONFIRMED_PRACTICAL_GAP:'Ursprüngliches Kriterium erreicht',BELOW_PRACTICAL_THRESHOLD:'Unter der ursprünglichen praktischen Schwelle',UNKNOWN_INCOMPLETE:'Messung unvollständig'};
+$('inference').innerHTML=data.inference.map(v=>`<p><b>${esc(contrastName(v.contrast))}</b><br>${esc(verdict[v.status]||v.status)}. Intervall: ${v.ci?v.ci.map(pp).join(' bis '):'—'}.</p>`).join('')||'<p>Keine formale Prüfung vorhanden.</p>';
+const bbh=data.cells.filter(c=>c.phase==='bbh'&&c.task==='all'&&c.seed==='all').sort((a,b)=>a.n-b.n||a.model.localeCompare(b.model));
+$('bbh').innerHTML='<table><tr><th>Modell</th><th>Personen</th><th>Richtige Antworten</th><th>Gemessen</th></tr>'+bbh.map(c=>`<tr><td>${short(c.model)}</td><td>${c.n}</td><td>${pctCount(c)}</td><td>${c.observed}/${c.planned}</td></tr>`).join('')+'</table>';
+function detail(phase,task,d,rows){
+ if(!focus){$('detail').innerHTML='<p class="empty">Für diese Auswahl liegen keine Fälle vor.</p>';return;}
+ const [n,r]=focus,gs=desc.groups.filter(c=>cellMatch(c,n,r,d,phase,task));
+ const pair=desc.pairs.find(c=>cellMatch(c,n,r,d,phase,task));
+ let html=`<h3>${task==='swap'?'Tauschen':'Weitergeben'} · N=${n}, R=${r}, D=${d} · insgesamt K=${r+d} Ereignisse</h3><p class="muted">Ein Kreis = eine Strukturgruppe mit zwei Antwortanordnungen. Die Zahl im Kreis gibt an, wie viele der beiden Antworten richtig waren: 0, 1 oder 2. Die Reihenfolge der Gruppen ist bei beiden Modellen gleich.</p><div class="cards">`;
+ for(const m of models){
+  const c=rows.find(c=>c.n===n&&c.relevant_updates===r&&c.model===m),s=desc.cells.find(c=>cellMatch(c,n,r,d,phase,task)&&c.model===m);
+  const groups=gs.filter(g=>g.model===m).sort((a,b)=>a.group_id.localeCompare(b.group_id));
+  html+=`<div class="card"><h3 class="${cls(m)}">${short(m)}</h3><b class="big">${pct(c?.display_accuracy)}</b><span>${c?c.correct+'/'+c.planned+' Antworten richtig':'Nicht gemessen'}</span><div class="dots" aria-label="Gruppenwerte ${short(m)}">`;
+  html+=groups.map((g,i)=>`<span class="dot ${g.score==null?'unknown':g.score===1?'full':g.score===.5?'half':''}" title="Gruppe ${i+1}, Seed ${g.seed}: ${g.score==null?'unvollständig':g.correct+' von 2 richtig'}; ${g.format_failures} Formatfehler">${g.score==null?'?':g.correct}</span>`).join('');
+  html+=`</div><p class="muted">${s?s.complete_groups+'/'+s.group_count:'0'} vollständige Gruppen.<br>Spannweite der vollständigen Gruppen: ${s?pct(s.minimum)+' bis '+pct(s.maximum):'—'}.<br>Formatfehler (als falsch gewertet): ${c?.format_failures||0}.</p></div>`;
+ }
+ html+='</div><p class="muted">Die Spannweite beschreibt die gemessenen Fallunterschiede. Sie ist kein Konfidenzintervall. Wenige Gruppen geben einen groben Einblick; auch gleiche Gruppenwerte beweisen keine allgemeine Fehlerfreiheit.</p>';
+ if(pair){
+  html+=`<p class="paired"><b>Luna − Sonnet auf denselben Gruppen: ${pp(pair.difference)}</b><br><small>Positiv: mehr richtige Antworten bei Luna. Negativ: mehr bei Sonnet. ${pair.complete_groups}/${pair.groups.length} Gruppen vollständig für beide Modelle.</small></p>`;
+  html+='<details id="group-table"><summary>Alle Gruppen nebeneinander ansehen</summary><div class="scroll"><table><tr><th>Gruppe</th><th>Generator-Seed</th><th>Luna</th><th>Sonnet</th><th>Luna − Sonnet</th></tr>';
+  html+=pair.groups.map((g,i)=>`<tr><td>${i+1}</td><td>${g.seed}</td><td>${g.left==null?'unbekannt':(g.left*2)+'/2'}</td><td>${g.right==null?'unbekannt':(g.right*2)+'/2'}</td><td>${pp(g.difference)}</td></tr>`).join('');
+  html+='</table></div><p class="muted">Ein Generator-Seed bestimmt die erzeugten Fälle. Er ist kein API-Seed und keine Wiederholung derselben Anfrage. Gruppen-IDs und Fehlerzahlen stehen im CSV-Export.</p></details>';
+ }else html+='<p class="muted">Für diesen Export liegen keine Einzelgruppen vor.</p>';
+ $('detail').innerHTML=html;
+}
+function render(){
+ const phase=$('phase').value,task=$('task').value,d=Number($('d').value),rows=scores(phase,task,d);
+ $('series-note').textContent=isGrid?'Eine frische Messreihe über alle 36 Kombinationen: neun Gruppen je Zelle, drei pro Generator-Seed, jeweils zwei Antwortanordnungen. Kein Pilot, keine Auswahl einzelner Zellen.':phase==='develop'?'Breites Raster: drei verschiedene Strukturgruppen je Aufgabe und N/R/D-Zelle, jeweils zwei Antwortanordnungen. Alle drei Gruppen werden unten gezeigt.':'Zusätzliche frische Fälle: 24 Gruppen je ausgewählter Zelle, jeweils zwei Antwortanordnungen. Diese Zellen wurden wegen auffälliger Pilotunterschiede ausgewählt; sie repräsentieren nicht das gesamte Raster.';
+ $('task-note').textContent=task==='swap'?'Tauschen: Zwei Personen tauschen ihre Gegenstände.':'Weitergeben: Eine Person gibt einen Gegenstand an eine andere Person.';
+ $('overview').innerHTML=models.map(m=>{const cs=rows.filter(c=>c.model===m),planned=cs.reduce((s,c)=>s+c.planned,0),observed=cs.reduce((s,c)=>s+c.observed,0),technical=cs.reduce((s,c)=>s+(c.technical_ok||0),0),correct=cs.reduce((s,c)=>s+c.correct,0);return `<div class="card"><b class="${cls(m)}">${short(m)}</b><strong class="big">${planned&&observed===planned&&technical===planned?pct(correct/planned):'—'}</strong><span>${correct}/${planned} richtig in der gewählten Ansicht</span><br><small>${observed}/${planned} Antworten vorhanden · ${technical}/${planned} technisch auswertbar · ${cs.reduce((s,c)=>s+(c.format_failures||0),0)} Formatfehler</small></div>`;}).join('');
+ if(!focus||!rows.some(c=>c.n===focus[0]&&c.relevant_updates===focus[1]))focus=rows.length?[rows[0].n,rows[0].relevant_updates]:null;
+ let html='<table><thead><tr><th>R ↓ / N →</th>'+data.axes.n.map(n=>`<th>${n} Personen</th>`).join('')+'</tr></thead><tbody>';
+ for(const r of data.axes.r){html+=`<tr><th>${r} Wechsel</th>`;for(const n of data.axes.n){const cs=rows.filter(c=>c.n===n&&c.relevant_updates===r),selected=focus&&focus[0]===n&&focus[1]===r;html+=`<td><button class="cell" data-n="${n}" data-r="${r}" aria-label="N=${n}, R=${r}, D=${d}" aria-pressed="${!!selected}" ${cs.length?'':'disabled'}>`;
+ if(!cs.length)html+='Nicht gemessen';else{for(const m of models){const c=cs.find(c=>c.model===m);html+=`<div class="scoreline ${cls(m)}"><span>${short(m)}</span><strong>${pct(c?.display_accuracy)}</strong></div><div class="track ${cls(m)}"><span style="width:${100*(c?.display_accuracy||0)}%"></span></div>`;}html+=`<small>${cs[0].groups} Gruppen je Modell · K=${r+d}</small>`;if(cs.some(c=>c.observed<c.planned||(c.technical_ok||0)<c.planned))html+='<small>Messung unvollständig</small>';}
+ html+='</button></td>'; }html+='</tr>';}
+ $('heat').innerHTML=html+'</tbody></table>';
+ for(const button of $('heat').querySelectorAll('button:not(:disabled)'))button.addEventListener('click',()=>{focus=[Number(button.dataset.n),Number(button.dataset.r)];render();$('group-detail').scrollIntoView({behavior:'smooth',block:'start'});});
+ detail(phase,task,d,rows);
+ if(typeof renderCurves==='function')renderCurves();
+}
+__CURVE_SCRIPT__
+for(const name of ['phase','task','d'])$(name).addEventListener('change',()=>{if(name==='phase'){$('d').value='0';focus=null;}render();});
+render();
+</script></main></body></html>

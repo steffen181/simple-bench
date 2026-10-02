@@ -1,0 +1,5 @@
+{
+  "mode": "live",
+  "accept_input_bound_assumption": true,
+  "confirmation_groups_per_seed_task": 2
+}

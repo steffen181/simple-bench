@@ -34,8 +34,25 @@ def demo(out):
 
 
 def main(argv=None):
+    import sys
+    argv=sys.argv[1:] if argv is None else argv
+    if argv and argv[0]=='reasoning':
+        from .reasoning_campaign import main as reasoning_main
+        return reasoning_main(argv[1:])
+    if argv and argv[0]=='swap-curves':
+        from .swap_curves import main as swap_main
+        return swap_main(argv[1:])
+    if argv and argv[0]=='factorial':
+        from .factorial_cli import main as factorial_main
+        return factorial_main(argv[1:])
+    if argv and argv[0]=='structured':
+        from .structured_campaign import main as structured_main
+        return structured_main(argv[1:])
+    if argv and argv[0] in ('campaign','dashboard'):
+        from .frontier_cli import main as frontier_main
+        return frontier_main(argv)
     parser=argparse.ArgumentParser(description=__doc__);sub=parser.add_subparsers(dest='command',required=True)
-    p=sub.add_parser('generate');p.add_argument('--entities',type=int,nargs='+',default=[4]);p.add_argument('--steps',type=int,nargs='+',default=[4,8,16,32]);p.add_argument('--per-cell',type=int,default=4);p.add_argument('--seed',type=int,default=20260929);p.add_argument('--blocked',type=Path);p.add_argument('--out',type=Path,required=True)
+    p=sub.add_parser('generate');p.add_argument('--version',choices=['v1','v2'],default='v1');p.add_argument('--relevant-updates',type=int);p.add_argument('--tasks',nargs='+',choices=['swap','handoff'],default=['swap','handoff']);p.add_argument('--entities',type=int,nargs='+',default=[4]);p.add_argument('--steps',type=int,nargs='+',default=[4,8,16,32]);p.add_argument('--per-cell',type=int,default=4);p.add_argument('--seed',type=int,default=20260929);p.add_argument('--blocked',type=Path);p.add_argument('--out',type=Path,required=True)
     p=sub.add_parser('demo');p.add_argument('--out',type=Path,required=True)
     p=sub.add_parser('catalog');p.add_argument('--out',type=Path,required=True)
     p=sub.add_parser('prepare')
@@ -51,7 +68,13 @@ def main(argv=None):
     a=parser.parse_args(argv)
     try:
         if a.command=='generate':
-            corpus=generate(a.entities,a.steps,a.per_cell,a.seed,_blocked(a.blocked));write_new(a.out,corpus);result=dict(cases=len(corpus['cases']),groups=len({c['canonical_id'] for c in corpus['cases']}),sha256=corpus['hash'])
+            if a.version=='v2':
+                from .ladder_v2 import generate as generate_v2
+                corpus=generate_v2(a.entities,a.steps,a.relevant_updates,a.tasks,a.per_cell,a.seed,_blocked(a.blocked))
+            else:
+                if a.relevant_updates is not None or a.tasks!=['swap','handoff']:raise ValueError('custom relevance/tasks require v2')
+                corpus=generate(a.entities,a.steps,a.per_cell,a.seed,_blocked(a.blocked))
+            write_new(a.out,corpus);result=dict(cases=len(corpus['cases']),groups=len({c['canonical_id'] for c in corpus['cases']}),sha256=corpus['hash'])
         elif a.command=='demo':result=demo(a.out)
         elif a.command=='catalog':
             catalog=OpenRouter().catalog();write_new(a.out,catalog);result=dict(models=len(catalog['data']))

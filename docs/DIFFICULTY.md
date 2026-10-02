@@ -29,3 +29,9 @@ The default report is descriptive and has no significance or validation verdict.
 Increasing length and relevant updates is a designed complexity gradient, not a guarantee of monotonic measured difficulty. Event count, chance level, language/template difficulty and state complexity should not be collapsed into one score without a preregistered weighting. Fixed names, repeated templates and prior model training remain limitations. Exclusion proves freshness only relative to the supplied structural history.
 
 The BBH generator uses a different query direction (which object a person has), N=5/7 and BBH event counts. Its historical exclusions are packaged separately. Do not compare its structure IDs directly to the ladder's object-to-owner schema. Neither schema proves absence of training contamination.
+
+## Optional v2 for larger entity sets
+
+`tracking-bench generate --version v2` supports 3–64 entities and up to 128 events, selectable task types and an exact relevant-update count. It requires the `campaign` extra (pinned igraph 0.11.9). Its graph identity schema is `ownership-bliss-v2`: people, objects, initial holdings, queried object, event order and event roles are preserved under renaming. Swap participants are unordered; giver/recipient roles are ordered. Independent set-based solving and text replay are both checked before returning a case.
+
+The old v1 generator and its hashes remain unchanged. V2 IDs are different; small v2 cases also carry a legacy ID, and exclusions accept those legacy IDs. Tests compare old/new equivalence classes on small graphs and run large symmetric cases. Do not mix schemas without this explicit mapping. More entities increase chance-level differences and prompt length as well as state complexity; the dashboard exposes those dimensions separately.

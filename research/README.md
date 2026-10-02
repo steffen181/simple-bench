@@ -14,3 +14,11 @@ All entries use the pinned native raw-three-shot/full-continuation metric with N
 Phi revision: `cfbefacb99257ffa30c83adab238a50856ac3083`; Qwen revision: `a09a35458c702b33eeacc393d103063234e8bc28`. Quantization, prompt and revision are part of the measurement. Separate CoT conditions in the research archive are not interchangeable with these scores.
 
 `source-map.json` identifies copied benchmark code and tests. `migration-inventory.json` maps dated scripts to portable facilities or archive-dependent APIs. Historical canonical IDs exclude known structures without bundling private run metadata, raw API responses or billing records.
+
+
+New API diagnostics: [structured-output smoke, 2026-09-30](structured-output-smoke-20260930/REPORT.md). Matched schema/no-schema arms at 256/1024 tokens; reused questions and a small original BBH subset. Archived probe scripts are experimental evidence, not part of the supported CLI.
+
+The subsequent [fresh structured comparison](../docs/RESULTS_STRUCTURED_COMPARISON_20260930.md) completed 534 calls with no schema/completion failures: 108 fresh generator groups (432 answers), 45 reused BBH originals (90 answers), and 12 controls. Strict JSON / 256 tokens / API reasoning off. Handoff and swap diverged sharply; there is no established entity-count threshold. Its scores remain separate from both the native historical study and the earlier generation protocols. [Dashboard](../dashboard/luna-sonnet-structured-20260930/index.html).
+
+
+The completed [factorial N/R/D comparison](../docs/RESULTS_FACTORIAL_COMPARISON_20260930.md) crosses 36 N/R/D combinations for swap and handoff, then confirms two selected contrasts on 48 fresh structure groups. Development 958 and confirmation 192 calls completed with two format failures scored false. Both selected effects remain INCONCLUSIVE under the frozen conservative intervals. [Interactive dashboard](../dashboard/luna-sonnet-factorial-20260930/index.html); BBH remains a separate 45-question chat-generation reference, not native acc_norm.
